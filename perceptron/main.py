@@ -8,8 +8,14 @@ n_per_class = 50
 class_pos = np.random.randn(n_per_class, 2) + np.array([2, 2])
 class_neg = np.random.randn(n_per_class, 2) + np.array([-2, -2])
 
-X = np.vstack((class_pos, class_neg))
-y = np.hstack((np.ones(n_per_class), -np.ones(n_per_class)))
+X = np.vstack((class_pos, class_neg)) # format -> [n1(x1, x2), n2(x1, x2), ...nx(x1, x2)]
+y = np.hstack((np.ones(n_per_class), -np.ones(n_per_class))) # format -> [-1, +1, ..., +-1]
+
+def sign(x):
+    if x >= 0:
+        return 1
+    else:
+        return -1
 
 def train_perceptron(X, y, max_epochs=100):
 
@@ -22,8 +28,8 @@ def train_perceptron(X, y, max_epochs=100):
 
         for i, x in enumerate(X):
 
-            z = np.dot(w, x) + b
-            y_pred = 1 if z >= 0 else -1
+            z = np.dot(w, x) + b # w1x1 + w2x2 + b
+            y_pred = sign(z)
             y_true = y[i]
 
             if y_pred != y_true:

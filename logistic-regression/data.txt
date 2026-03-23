@@ -3,9 +3,17 @@ threshold = 1e-5
 fail_safe = 5000
 learning_rate = 0.08
 
-pdf: 0.67
+pdf: 0.75
+threshold = 1e-5
+fail_safe = 10000
+learning_rate = 0.01
 
 cancer: 0.9672
 threshold = 1e-5
 fail_safe = 5000
 learning_rate = 0.08
+
+pima: 0.7532 (bgd) | 0.7759 (sgd)
+threshold = 1e-6
+fail_safe = 5000
+learning_rate = 0.01

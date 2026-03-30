@@ -17,3 +17,8 @@ pima: 0.7532 (bgd) | 0.7759 (sgd)
 threshold = 1e-6
 fail_safe = 5000
 learning_rate = 0.01
+
+breast: 99
+threshold = 1e-5
+fail_safe = 5000
+learning_rate = 0.01

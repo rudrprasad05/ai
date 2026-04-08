@@ -1,0 +1,8 @@
+2  => Test Accuracy: 0.7500
+4  => Test Accuracy: 0.7500
+5  => Test Accuracy: 0.7305
+6  => Test Accuracy: 0.7305
+7  => Test Accuracy: 0.7045
+10 => Test Accuracy: 0.7435
+15 => Test Accuracy: 0.7143
+

@@ -15,7 +15,7 @@ import matplotlib.pyplot as plt
 # %%
 # load data
 
-df = pd.read_csv('data/pima-indians-diabetes.data', skiprows=2, header=None)
+df = pd.read_csv('../data/pima-indians-diabetes.data', skiprows=2, header=None)
 
 X = df.iloc[:, :-1] # everything except last column
 y = df.iloc[:, -1] # last col
